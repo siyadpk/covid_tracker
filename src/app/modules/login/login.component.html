@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="circle"></div>
+        <div class="small-circle"></div>
+        <span class="covid-19-text">COVID-19</span>
+    </div>
+    <div class="col-md-6">
+        <div class="card login-form-outer">
+            <div class="login-form">
+                <div class="text-center alert alert-info" role="alert">
+                    Login with siyad as username and password as 123
+                  </div>
+                <form class="form-padding" [formGroup]="loginForm" (keyup)="changeLoginValues()" (ngSubmit)="attemptLogin()">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input formControlName="username" type="text" class="form-control" placeholder="User Name">
+                    </div>
+                    <div class="form-group mt-4">
+                        <label>Password</label>
+                        <input formControlName="password" type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <p class="mb-0 text-danger text-center mt-2" *ngIf="loginError">Incorrect username or password</p>
+                    <button [disabled]="loginForm.invalid" type="submit"
+                        class="btn w-100 btn-primary mt-5 ml-3 login-button">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

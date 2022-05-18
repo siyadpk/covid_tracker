@@ -1,0 +1,37 @@
+<div class="sidebar" *ngIf="screenWidth>768">
+    <div class="d-flex flex-column justify-content-between sidebar-container">
+        <div class="mt-4">
+            <div class="sidebar-icon" routerLink="/dashboard" routerLinkActive="active">
+                <i class="fa fa-tachometer fa-2x"></i>
+            </div>
+            <div class="sidebar-icon" routerLink="/country-wise-list" routerLinkActive="active">
+                <i class="fa fa-flag fa-2x"></i>
+            </div>
+        </div>
+        <div>
+            <div class="sidebar-icon logout-button" (click)="logout()">
+                <i class="fa fa-power-off fa-2x"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar-horizontal" *ngIf="screenWidth <= 768">
+    <div class="row">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex">
+                <div class="sidebar-icon vertical mr-2" routerLink="/dashboard" routerLinkActive="active">
+                    <i class="fa fa-tachometer fa-2x"></i>
+                </div>
+                <div class="sidebar-icon vertical" routerLink="/country-wise-list" routerLinkActive="active">
+                    <i class="fa fa-flag fa-2x"></i>
+                </div>
+            </div>
+            <div>
+                <div class="sidebar-icon vertical logout-button" (click)="logout()">
+                    <i class="fa fa-power-off fa-2x"></i>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

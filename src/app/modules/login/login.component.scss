@@ -1,0 +1,44 @@
+.circle {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    background: linear-gradient(to top, #0844fb, #0ee497);
+    border-radius: 50%;
+    left: -90px;
+    top: -72px;
+}
+.small-circle{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background: linear-gradient(to top, #0844fb, #0ee497);
+    border-radius: 50%;
+    left: -62px;
+    top: 135px;
+}
+
+.covid-19-text{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-size: 4em;
+}
+
+.login-button{
+    border-radius: 1em;
+    background: #426bff;
+}
+
+@media only screen and (min-width: 600px) {
+    .login-form-outer {
+      margin : 7em;
+    }
+}
+
+.login-form-outer{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form-padding{
+    padding: 3em;
+}

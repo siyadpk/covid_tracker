@@ -1,0 +1,35 @@
+<div class="dashboard-container">
+    <div class="row container">
+        <div class="col-md-12">
+            <h3>Total</h3>
+
+            <div class="row gx-5 mt-4">
+                <app-card class="col-md-4 mb-1" [title]="'Total Cases'" [isLoading]="isLoading"
+                    [data]="covidBasicInfo?.cases | number:'1.0':'en-US'"></app-card>
+
+                <app-card class="col-md-4 mb-1" [title]="'Total Deaths'" [isLoading]="isLoading"
+                    [data]="covidBasicInfo?.deaths | number:'1.0':'en-US'"></app-card>
+
+                <app-card class="col-md-4 mb-1" [title]="'Total Recovered'" [isLoading]="isLoading"
+                    [data]="covidBasicInfo?.recovered | number:'1.0':'en-US'"></app-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="row container">
+        <div class="col-md-12 mt-4">
+            <h3>Todays</h3>
+            
+            <div class="row mt-4">
+                <app-card class="col-md-4 mb-1" [title]="'Cases'" [isLoading]="isLoading"
+                    [data]="covidBasicInfo?.todayCases | number:'1.0':'en-US'"></app-card>
+
+                <app-card class="col-md-4 mb-1" [title]="'Deaths'" [isLoading]="isLoading"
+                    [data]="covidBasicInfo?.todayDeaths | number:'1.0':'en-US'"></app-card>
+
+                <app-card class="col-md-4 mb-1" [title]="'Recovered'" [isLoading]="isLoading"
+                    [data]="covidBasicInfo?.todayRecovered | number:'1.0':'en-US'"></app-card>
+            </div>
+        </div>
+    </div>
+</div>
